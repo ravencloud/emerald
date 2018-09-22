@@ -341,7 +341,7 @@ function insertItemPortionName(html,
   return html;
 }
 
-// Add action for About Button
+//About
 dc.loadAbout = function () {
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(aboutHtml, buildAbout, false);
