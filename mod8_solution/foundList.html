@@ -1,0 +1,9 @@
+<h3>{{list.title}}</h3>
+<ol class="list-group">
+  <li ng-repeat="item in list.found" class="list-group-item">
+    <h4>{{item.short_name}}: {{item.name}}</h4>
+    <div class="well">{{item.description}}</div>
+    <button ng-click="list.onRemove({index: $index});">Don't want this one!</button>
+  </li>
+</ol>
+<h3 ng-if="list.nothingFound()">Nothing Found</h2>

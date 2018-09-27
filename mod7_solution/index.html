@@ -36,7 +36,7 @@
      <ul>
        <li ng-repeat="item in toBuyList.items">
             Buy <input type="text" ng-model="item.quantity"></input> of {{item.name}} @ {{item.pricePerItem}}
-            <button ng-click="toBuyList.boughtItem($index);" class="btn btn-default"><span class="glyphicon glyphicon-ok"></span>Buy</button>
+            <button ng-click="toBuyList.boughtItem($index);" class="btn btn-default"><span class="glyphicon glyphicon-ok"></span>Bought</button>
         </li>
      </ul>
       <div ng-if="toBuyList.items.length == 0" class="emptyMessage">Everything is bought!</div>
