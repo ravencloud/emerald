@@ -14,17 +14,18 @@ function LunchCheckController($scope) {
             var lunches = lunchInput.split(',').filter(function(entry) { return /\S/.test(entry); });
 
             if (lunches.length > 0 && lunches.length <= 3) {
-                $scope.lunchOutputStyle = "color:green; border: 1px solid green;";
+                $scope.lunchOutputStyle = "color:green; border: 2px solid green;";
                 $scope.lunchOutput = "Enjoy!";
             } else if (lunches.length > 3) {
                 $scope.lunchOutput = "Too much!";
+                $scope.lunchOutputStyle = "color:green; border: 2px solid green;";
             } else {
                 $scope.lunchOutput = "Please enter data first";
-                $scope.lunchOutputStyle = "color:red; border: 1px solid red;"; 
+                $scope.lunchOutputStyle = "color:red; border: 2px solid red;"; 
             }
       } else {
         $scope.lunchOutput = "Please enter data first";
-        $scope.lunchOutputStyle = "color:red; border: 1px solid red;";
+        $scope.lunchOutputStyle = "color:red; border: 2px solid red;";
       }
   }
 }
