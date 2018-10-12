@@ -1,0 +1,32 @@
+<div class="container">
+  <div>
+    <div class="col-md-6 col-md-offset-3">
+      <div ng-if="userCtrl.exists">
+        <h2>Your Information</h2>
+        Name: {{ registerCtrl.savedUser.first_name}}  {{ registerCtrl.savedUser.last_name}}<br>
+        Email: {{ registerCtrl.savedUser.email}}<br>
+        Phone: {{ registerCtrl.savedUser.phone }}<br>
+        
+        <h3>Menu Favorite</h3>
+        <div class="col-md-4">
+          <div class="menu-item-photo">
+            <div>{{userCtrl.menuFavorite.short_name}}</div>
+            <img class="img-responsive" width="250" height="150" ng-src="images/menu/{{userCtrl.menuFavorite.category_short_name}}/{{userCtrl.menuFavorite.category_short_name}}.jpg" alt="{{userCtrl.menuFavorite.name}}">
+          </div>
+        </div>
+        <div class="menu-item-description col-md-7">
+          <h3 class="menu-item-title">{{userCtrl.menuFavorite.name}}</h3>
+          <p class="menu-item-details">{{userCtrl.menuFavorite.description}}</p>
+        </div>
+      </div>
+      
+      <div ng-if="userCtrl.failed">
+        <h2>
+          <a ui-sref="public.register" style="text-decoration: underline; color: white;">
+            Not Signed Up Yet. Sign up Now!
+          </a>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
